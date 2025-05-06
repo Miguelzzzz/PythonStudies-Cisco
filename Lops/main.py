@@ -60,3 +60,6 @@ for aux in range(2, 8):
 # Vai do 2 ate o 8 de tres em tres
 for aux in range(2, 8, 3):
     print("O valor de aux é atualmente", aux)    
+
+
+# Break e Continue    
