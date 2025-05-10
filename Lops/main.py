@@ -63,3 +63,32 @@ for aux in range(2, 8, 3):
 
 
 # Break e Continue    
+# break - sai do loop imediatamente e termina incondicionalmente a operação do loop; o programa começa a executar a instrução mais próxima após o corpo do loop;
+# continue - se comporta como se o programa tivesse chegado ao fim do corpo; o próximo turno é iniciado e a expressão de condição é testada imediatamente.
+
+# break - exemplo
+
+print("The break instrução:")
+for i in range(1, 6):
+    if i == 3:
+        break
+    print("Dentro do laço.", i)
+print("Fora do loop.")
+
+# continue - exemplo
+
+print("The continue instrução:")
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print("Dentro do laço.", i)
+print("Fora do loop.")
+
+# exemplo pratico
+
+while True:
+    palavra = input("Insira uma palavra ou digite chupacabra para finalizar o programa: ")
+    if palavra == "chupacabra":
+        break
+
+print("Você saiu do loop com sucesso!")
