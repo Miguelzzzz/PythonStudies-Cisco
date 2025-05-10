@@ -30,3 +30,33 @@ for i in range(1, len(my_list)):
         largest = my_list[i]
 
 print(largest)
+
+# Listas com operações avançadas
+twos = [2 ** i for i in range(8)]  # O fragmento cria uma matriz de oito elementos que contém as oito primeiras potências de dois (1, 2, 4, 8, 16, 32, 64, 128)
+
+# Criando uma matriz
+EMPTY = "."
+board = [[EMPTY for i in range(8)] for j in range(8)]
+board[7][7] = "ROOK"  # Dou um valor a uma posição especifica
+for row in board:
+    print(" ".join(row))
+
+
+# Exemplo pratico
+# Cubo - uma matriz tridimensional (3x3x3)
+
+cube = [[[':(', 'x', 'x'],
+        [':)', 'x', 'x'],
+        [':(', 'x', 'x']],
+
+        [[':)', 'x', 'x'],
+        [':(', 'x', 'x'],
+        [':)', 'x', 'x']],
+
+        [[':(', 'x', 'x'],
+        [':)', 'x', 'x'],
+        [':)', 'x', 'x']]]
+
+print(cube)
+print(cube[0][0][0])  # outputs: ':('
+print(cube[2][2][0])  # outputs: ':)'
