@@ -32,3 +32,37 @@ push(1)
 print(pop()) # Retorna: 1
 print(pop()) # Retorna: 2
 print(pop()) # Retorna: 3
+
+# SubClasses: Uma função chamada issubclass(Class_1, Class_2) é capaz de determinar se Class_1 é uma subclasse de Class_2
+# Exemplo pratico:
+class Mouse:
+    pass
+
+class LabMouse(Mouse):
+    pass
+
+print(issubclass(Mouse, LabMouse), issubclass(LabMouse, Mouse))
+
+# Uma função chamada isinstance(Object, Class) verifica se um objeto é proveniente de uma classe indicada
+# Exemplo pratico:
+class Mouse:
+    pass
+
+class LabMouse(Mouse):
+    pass
+
+mickey = Mouse()
+print(isinstance(mickey, Mouse), isinstance(mickey, LabMouse))
+
+# Uma função sem parâmetro chamada super() retorna uma referência à superclasse mais próxima da classe
+# Exemplo pratico:
+class Mouse:
+    def __str__(self):
+        return "Mouse"
+
+class LabMouse(Mouse):
+    def __str__(self):
+        return "Laboratory " + super().__str__()
+
+doctor_mouse = LabMouse()
+print(doctor_mouse)

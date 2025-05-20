@@ -25,3 +25,17 @@ except:
 # OverflowError uma exceção concreta, gerada quando uma operação produz um número grande demais para ser armazenado com sucesso
 # ImportError uma exceção concreta, gerada quando ocorre uma falha em uma operação de importação
 # KeyError  uma exceção concreta gerada quando você tenta acessar um elemento não existente em uma coleção (por ex., o elemento de um dicionário)
+
+# Este programa faz um dump de todas as classes de exceção predefinidas na forma de uma visualização em árvore
+def print_exception_tree(thisclass, nest = 0):
+    if nest > 1:
+        print("   |" * (nest - 1), end="")
+    if nest > 0:
+        print("   +---", end="")
+
+    print(thisclass.__name__)
+
+    for subclass in thisclass.__subclasses__():
+        print_exception_tree(subclass, nest + 1)
+
+print_exception_tree(BaseException)
