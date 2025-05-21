@@ -35,4 +35,21 @@ except Exception as exc:
 # Três fluxos predefinidos já estarão abertos na inicialização do programa:
 # sys.stdin – entrada padrão;
 # sys.stdout – entrada padrão;
-# sys.stderr – saída de erro padrão.    
+# sys.stderr – saída de erro padrão.  
+
+
+print("Arquivos")
+
+# Para ler o conteúdo de um arquivo, os seguintes métodos de fluxo podem ser usados:
+# read(number) – lê number caracteres/bytes do arquivo e os retorna como uma string; é capaz de ler todo o arquivo de uma só vez;
+# readline() – lê uma única linha do arquivo de texto;
+# readlines(number) – lê number linhas do arquivo de texto; é capaz de ler todo o arquivo de uma só vez;
+# readinto(bytearray) – lê os bytes do arquivo e preenche bytearray com esses dados;
+
+# Para gravar novo conteúdo em um arquivo, podemos usar os métodos de fluxo a seguir:
+# write(string) – grava uma string em um arquivo de texto;
+# write(bytearray) – grava todos os bytes de bytearray em um arquivo;
+
+# O método open() retorna um objeto que pode ser usado para iterar por todas as linhas do arquivo dentro de um loop for. Por exemplo:
+# for line in open("file", "rt"):
+#     print(line, end='')
