@@ -50,11 +50,9 @@ print(my_date.strftime("Week number of the year: %W"))
 
 print("Calendario")
 
-
 # Calendario
 import calendar
 print(calendar.calendar(2020)) # Ano especifico
 
 import calendar
 print(calendar.month(2020, 11)) # mes especifico
-    
